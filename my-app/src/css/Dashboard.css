@@ -14,13 +14,19 @@ mark {
 
 
 h2, h3 {
-  color: rgb(81, 93, 211); /* Echoing the Footer Blue */
+  color: rgb(81, 93, 211);
   font-weight: 700;
   margin-bottom: 15px;
 }
 
 h2 { font-size: 2.5rem; }
-h3 { font-size: 1.8rem; border-bottom: 2px solid #f25a17; display: inline-block; padding-bottom: 5px; }
+h3 { font-size: 1.8rem; }
+
+.services-text h3 {
+  border-bottom: 2px solid #f25a17;
+  display: inline-block;
+  padding-bottom: 5px;
+}
 /* --- Hero Section (Top) --- */
 .hero-container {
   background-size: cover;
@@ -162,7 +168,8 @@ h3 { font-size: 1.8rem; border-bottom: 2px solid #f25a17; display: inline-block;
   width: 380px;
   height: 380px;
   object-fit: cover;
-  border: 4px solid rgba(255, 255, 255, 0.9); /* Cleaner border */
+  border: 4px solid rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
 }
 
 /* Responsive */
@@ -261,6 +268,7 @@ h3 { font-size: 1.8rem; border-bottom: 2px solid #f25a17; display: inline-block;
 
 /* Style for the text link */
 .text-link {
+  color: rgb(81, 93, 211);
   text-decoration: none;
   font-weight: bold;
   border-bottom: 1px solid transparent;
@@ -268,8 +276,8 @@ h3 { font-size: 1.8rem; border-bottom: 2px solid #f25a17; display: inline-block;
 }
 
 .text-link:hover {
-  color: #d94e10; /* Darker orange on hover */
-  border-bottom: 1px solid #d94e10; /* Adds an underline on hover */
+  color: #d94e10;
+  border-bottom: 1px solid #d94e10;
 }
 
 /* --- University Logo Styling --- */
@@ -289,8 +297,8 @@ h3 { font-size: 1.8rem; border-bottom: 2px solid #f25a17; display: inline-block;
 
 /* --- Teaching Section Layout --- */
 .teaching-section {
-  padding: 1px 10px;
-  background-color: #ffffff; /* Clean white background */
+  padding: 60px 20px;
+  background-color: #ffffff;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -400,8 +408,8 @@ h3 { font-size: 1.8rem; border-bottom: 2px solid #f25a17; display: inline-block;
 
 /* --- Main Content Area (White Background) --- */
 .main-content {
-  max-width: 1000px;
-  margin: 60px auto;
+  max-width: 1100px;
+  margin: 0 auto;
   padding: 0 20px;
 }
 
@@ -411,15 +419,39 @@ h3 { font-size: 1.8rem; border-bottom: 2px solid #f25a17; display: inline-block;
   justify-content: space-between;
   align-items: center;
   gap: 50px;
-  background-color: #f9f9f9; /* Light grey background for separation */
+  background-color: #f9f9f9;
   padding: 40px;
-  margin-top: 80px;
+  margin-top: 40px;
   border-radius: 12px;
   border-left: 5px solid rgb(81, 93, 211);
 }
 
 .services-text {
   flex: 1;
+}
+
+.styled-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.styled-list li {
+  padding: 8px 0 8px 20px;
+  position: relative;
+  border-bottom: 1px solid #e8e8e8;
+  color: #444;
+  font-size: 1rem;
+}
+
+.styled-list li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: rgb(81, 93, 211);
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.4;
 }
 
 .matcha-photo {
@@ -442,8 +474,16 @@ h3 { font-size: 1.8rem; border-bottom: 2px solid #f25a17; display: inline-block;
     max-width: 400px;
     height: auto;
   }
-  
+
   .hero-text-box {
     width: 100%;
+  }
+
+  .logo-container {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
   }
 }
